@@ -1,5 +1,10 @@
 # Seoul_Bike
 
+### Le projet se compose en 3 notebooks:
+1. Cleaning
+2. Analysis
+3. Model
+
 ### Aide pour lancer l'api django si vous n'avez pas d'environnement ou d'endroit ou lancer django sur votre machine
     ouvrir anaconda prompt 
     conda create -n djangoenv --clone root 
