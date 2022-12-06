@@ -6,9 +6,12 @@
     conda update -n djangoenv --all
     conda activate djangoenv
     pip install django
-    faire cd jusqua 'à arriver dans mysite/mysite
+### Lancer l'api :
+    faire cd dans apipython jusqua 'à arriver dans le chemain suivant : ..../mysite/mysite
+    (apres avoir activer l'environnement django)
     taper : python manage.py runserver
     prendre l'adresse écris dans le prompt normalement https......
-    et rajouter a la fin du dernier slash : polls
-    ensuite essayez les differents onglets
+    et rajouter a la fin du dernier slash de l'adresse : polls
+    
+    C'est fait vous pouvez utiliser l'API
 
