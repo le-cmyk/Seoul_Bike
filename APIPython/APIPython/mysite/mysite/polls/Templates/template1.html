@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>template1</title>
+  </head>
+  <body>
+    <label for="model-select"><big>Choisissez le modele pour lequel vous souhaitez voir son score:</big></label>
+    <br></br>
+    <form action = "apply_Model">
+    <label for = "model-select"> Accuracy des modeles</label>
+        <select name="model" id="model-select" onchange = 'if(this.value !=0) {this.form.submit();}'> 
+            <option value="0">choose model</option>
+            <option value="HistgradientBoosting">HistgradientBoosting</option>
+            <option value="BayesianRidgeModel">BayesianRidgeModel</option>
+            <option value="DecisionTreeRegressorModel">DecisionTreeRegressorModel</option>
+        </select>
+    </form>
+    <p>Le model prevoit en moyenne avec une erreur de :
+    {% for a in Accuracy%}
+    {{a}}
+    {% endfor %}
+    vélos
+    <p/>
+    <br></br>
+    <br></br>
+    <p></p>
+    <label for="model-select"><big>Graphique d'exploration du Dataset</big></label>
+    <br></br>
+    <form action = "apply_Graph">
+    <label for = "model-select"> Choisissez le graphique à afficher</label>
+        <select name="model" id="model-select" onchange = 'if(this.value !=0) {this.form.submit();}'> 
+            <option value="0">choose model</option>
+            <option value="PiePlot">MoyenneVéloLoué/mois</option>
+            <option value="BarPlot">Moyenne des bikes loués pour chaque heure 2017-2018 </option>
+            <option value="Matricecorrelation">Matricedecorrelation</option>
+        </select>
+    </form>
+    {{plot2_html|safe}}
+    <br></br>
+    <br></br>
+    <form action = "apply_GraphModel">
+    <label for = "model-select"><big>Visualisation des modeles de Machine Learning</big></label>
+    <br></br>
+        <select name="model" id="model-select" onchange = 'if(this.value !=0) {this.form.submit();}'> 
+            <option value="0">choose model</option>
+            <option value="GradientBoosting">GradientBoosting</option>
+            <option value="BayesianRidge">BayesianRidge </option>
+            <option value="RandomForestRegressor">RandomForestRegressor</option>
+        </select>
+    </form>
+    <p>Le temps d'affichage peut etre un peu long le temps du calcul du modele</p> 
+    <br></br>
+    {{plot3_html|safe}}
+  </body>
+</html>
