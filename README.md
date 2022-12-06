@@ -1,6 +1,6 @@
 # Seoul_Bike
 
-### Aide pour lancer l'api django
+### Aide pour lancer l'api django si vous n'avez pas d'environnement ou d'endroit ou lancer django sur votre machine
     ouvrir anaconda prompt 
     conda create -n djangoenv --clone root 
     conda update -n djangoenv --all
